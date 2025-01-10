@@ -45,7 +45,6 @@ ALLOWED_HOSTS = [
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://web-production-65de.up.railway.app',  # Railway domain
     'https://website-domain.com',                  # Your custom domain
     'https://127.0.0.1',
     'https://ecommerce-frontend-two-ruddy.vercel.app',
