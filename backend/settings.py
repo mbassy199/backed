@@ -45,11 +45,12 @@ ALLOWED_HOSTS = [
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    'backed-production-c154.up.railway.app',  # Railway domain
-    'https://website-domain.com',                  # Your custom domain
-    'https://127.0.0.1',
-    'https://ecommerce-frontend-two-ruddy.vercel.app',
+    'https://backed-production-c154.up.railway.app',  # Railway domain
+    'https://ecommerce-frontend-two-ruddy.vercel.app',  # Vercel frontend
+    'http://127.0.0.1',  # Local development
+    'https://127.0.0.1',  # Local development with HTTPS
 ]
+
 SECURE_CROSS_ORIGIN_OPENER_POLICY = 'same-origin-allow-popups'
 
 
