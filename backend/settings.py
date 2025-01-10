@@ -34,22 +34,30 @@ SECRET_KEY = 'django-insecure-b*tuoe%^o+=^35$0fufrm=oamh^(o0tabn39(7ni12(i-oup+4
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+# settings.py
+
+# ALLOWED_HOSTS for production and development
 ALLOWED_HOSTS = [
-    "priti-store-backend.railway.app",  # Railway backend domain
-    "mypritistore.com",                 # Custom domain
-    "www.mypritistore.com",             # Custom domain with 'www'
-    ".railway.app",                     # All Railway subdomains
-    "ecommerce-frontend-two-ruddy.vercel.app",  # Vercel frontend domain
-    "127.0.0.1",                        # Localhost
-    "localhost",                        # Localhost with no port
+    "priti-store-backend.railway.app",         # Railway backend domain
+    "mypritistore.com",                       # Custom domain
+    "www.mypritistore.com",                   # Custom domain with 'www'
+    ".railway.app",                           # All Railway subdomains
+    "ecommerce-frontend-two-ruddy.vercel.app", # Vercel frontend domain
+    "*.vercel.app",                           # Vercel subdomains (if applicable)
+    "127.0.0.1",                              # Localhost for development
+    "localhost",                              # Localhost without port for development
 ]
 
+# CSRF_TRUSTED_ORIGINS for trusted domains in production and development
 CSRF_TRUSTED_ORIGINS = [
-    'https://backed-production-c154.up.railway.app',  # Railway domain
-    'https://ecommerce-frontend-two-ruddy.vercel.app',  # Vercel frontend
-    'http://127.0.0.1',  # Local development
+    'https://priti-store-backend.railway.app',  # Railway backend domain (make sure the protocol is HTTPS)
+    'https://ecommerce-frontend-two-ruddy.vercel.app',  # Vercel frontend domain
+    'http://127.0.0.1',  # Local development with HTTP
     'https://127.0.0.1',  # Local development with HTTPS
+    'http://localhost',   # Local development without HTTPS
+    'https://localhost',  # Local development with HTTPS
 ]
+
 
 SECURE_CROSS_ORIGIN_OPENER_POLICY = 'same-origin-allow-popups'
 
